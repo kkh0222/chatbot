@@ -142,6 +142,41 @@
   .link-btn:hover { background: #f5f3f0; border-color: #bbb; }
   .link-btn .link-icon { font-size: 1rem; flex-shrink: 0; }
 
+  /* ── 경고 배너 ── */
+  .warn-banner {
+    background: #fff3cd;
+    border-bottom: 1px solid #ffe08a;
+    padding: 8px 14px;
+    font-size: 0.72rem;
+    color: #7a5a00;
+    display: flex; align-items: flex-start; gap: 6px;
+    flex-shrink: 0;
+    line-height: 1.5;
+  }
+  .warn-banner .warn-icon { flex-shrink: 0; font-size: 0.9rem; margin-top: 1px; }
+
+  /* ── 공식 채널 영역 ── */
+  .channel-section {
+    padding: 10px 16px 4px;
+    background: #fafaf9;
+    flex-shrink: 0;
+  }
+  .channel-label {
+    font-size: 0.7rem; color: #aaa; margin-bottom: 6px;
+  }
+  .channel-links {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;
+  }
+  .channel-btn {
+    padding: 5px 11px;
+    background: #fff; border: 1.5px solid #e0dbd4;
+    border-radius: 20px; font-size: 0.76rem;
+    color: #444; text-decoration: none;
+    transition: all 0.15s; white-space: nowrap;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .channel-btn:hover { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
   @media (max-width: 480px) {
     #chat-box { width: calc(100vw - 32px); }
     #chat-widget { right: 16px; bottom: 16px; }
@@ -171,6 +206,23 @@
         <div class="chat-header-status"><span class="status-dot"></span> 온라인</div>
       </div>
       <button class="home-btn" onclick="goHome()">🏠 홈</button>
+    </div>
+
+    <!-- 경고 배너 -->
+    <div class="warn-banner">
+      <span class="warn-icon">⚠️</span>
+      <span><b>사칭 주의!</b> 잠자리 체험단은 절대 금전 요구를 하지 않습니다. 반드시 공식 계정을 확인하세요.</span>
+    </div>
+
+    <!-- 공식 채널 (홈일 때만 표시) -->
+    <div class="channel-section" id="channel-section">
+      <div class="channel-label">📌 공식 채널</div>
+      <div class="channel-links">
+        <a class="channel-btn" href="https://www.alljam.co.kr/company" target="_blank" rel="noopener">🌐 홈페이지</a>
+        <a class="channel-btn" href="https://blog.naver.com/alljam10" target="_blank" rel="noopener">📝 블로그</a>
+        <a class="channel-btn" href="https://www.instagram.com/jamjari_kr" target="_blank" rel="noopener">📷 인스타 (체험단)</a>
+        <a class="channel-btn" href="https://www.instagram.com/jamjari_company" target="_blank" rel="noopener">📷 인스타 (회사)</a>
+      </div>
     </div>
 
     <!-- 메시지 -->
@@ -300,6 +352,10 @@ function renderMenu(key) {
   currentMenu = key;
   const menu = MENUS[key];
   if (!menu) return;
+
+  // 공식 채널 홈에서만 표시
+  const channelSection = document.getElementById('channel-section');
+  if (channelSection) channelSection.style.display = key === 'home' ? 'block' : 'none';
 
   // 말풍선 업데이트
   const messages = document.getElementById('messages');
