@@ -261,9 +261,9 @@ const MENUS = {
     bubble: "안녕하세요! 잠자리컴퍼니입니다 😊\n무엇을 도와드릴까요?",
     label: "문의 유형을 선택해 주세요",
     buttons: [
-      { text: "🤝 제휴문의 (사장님전용)", next: "partner" },
-      { text: "📸 체험단 문의",           next: "review"  },
-      { text: "👥 프렌즈 문의",           next: "friends" },
+      { text: " 제휴문의 (사장님전용)", next: "partner" },
+      { text: " 체험단 문의",           next: "review"  },
+      { text: " 프렌즈 문의",           next: "friends" },
     ]
   },
 
@@ -272,23 +272,23 @@ const MENUS = {
     bubble: "제휴문의 메뉴입니다.\n원하시는 항목을 선택해 주세요!",
     label: "제휴문의",
     buttons: [
-      { text: "📋 서비스 소개",   next: "partner_service" },
-      { text: "🗂️ 포트폴리오",    type: "link", url: "https://alljam.co.kr/company/about" },
-      { text: "💬 제휴 상담 문의", type: "link", url: "https://alljam.co.kr/company/inquiry" },
-      { text: "📞 담당자 연락처", next: "partner_contact" },
+      { text: " 서비스 소개",   next: "partner_service" },
+      { text: " 포트폴리오",    type: "link", url: "https://alljam.co.kr/company/about" },
+      { text: " 제휴 상담 문의", type: "link", url: "https://alljam.co.kr/company/inquiry" },
+      { text: " 담당자 연락처", next: "partner_contact" },
     ]
   },
   partner_service: {
     bubble: "잠자리컴퍼니 제휴 서비스 안내입니다 😊\n\n📱 마케팅 — SNS·블로그·유튜브 채널 운영 대행\n🌐 홈페이지 제작 — 호텔·숙박업 특화 웹사이트\n📷 촬영 — 공간·음식·제품 홍보 사진 촬영\n🖨️ 홍보물 제작 — 리플렛·배너·명함·카드뉴스",
     label: "제휴문의",
     buttons: [
-      { text: "🗂️ 포트폴리오 보기",  type: "link", url: "https://alljam.co.kr/company/about" },
-      { text: "💬 제휴 상담 문의",    type: "link", url: "https://alljam.co.kr/company/inquiry" },
+      { text: " 포트폴리오 보기",  type: "link", url: "https://alljam.co.kr/company/about" },
+      { text: " 제휴 상담 문의",    type: "link", url: "https://alljam.co.kr/company/inquiry" },
       { text: "← 제휴문의로 돌아가기", next: "partner" },
     ]
   },
   partner_contact: {
-    bubble: "제휴 담당자 연락처입니다 📞\n\n☎️ 070-8688-8253\n📱 010-3132-8151\n\n평일 09:00 ~ 17:00\n점심시간 12:00 ~ 13:00\n(주말·공휴일 휴무)",
+    bubble: "제휴 담당자 연락처입니다 \n\n☎️ 070-8688-8253\n📱 010-3132-8151\n\n평일 09:00 ~ 17:00\n점심시간 12:00 ~ 13:00\n(주말·공휴일 휴무)",
     label: "제휴문의",
     buttons: [
       { text: "💬 제휴 상담 문의하기", type: "link", url: "https://alljam.co.kr/company/inquiry" },
@@ -301,14 +301,14 @@ const MENUS = {
     bubble: "체험단 문의 메뉴입니다.\n원하시는 항목을 선택해 주세요!",
     label: "체험단 문의",
     buttons: [
-      { text: "📖 이용 가이드",     type: "link", url: "https://alljam.co.kr/guide" },
-      { text: "✏️ 체험단 신청",     type: "link", url: "https://alljam.co.kr/" },
-      { text: "💬 1:1 문의게시판",  type: "link", url: "https://alljam.co.kr/auth" },
-      { text: "📞 담당자 연락처",   next: "review_contact" },
+      { text: " 이용 가이드",     type: "link", url: "https://alljam.co.kr/guide" },
+      { text: " 체험단 신청",     type: "link", url: "https://alljam.co.kr/" },
+      { text: " 1:1 문의게시판",  type: "link", url: "https://alljam.co.kr/auth" },
+      { text: " 담당자 연락처",   next: "review_contact" },
     ]
   },
   review_contact: {
-    bubble: "체험단 담당자 연락처입니다 📞\n\n☎️ 070-8688-8253\n💛 카카오톡 ID : alljam20\n\n평일 09:00 ~ 18:00\n점심시간 12:00 ~ 13:00\n(주말·공휴일 휴무)",
+    bubble: "체험단 담당자 연락처입니다 \n\n☎️ 070-8688-8253\n💛 카카오톡 ID : alljam20\n\n평일 09:00 ~ 18:00\n점심시간 12:00 ~ 13:00\n(주말·공휴일 휴무)",
     label: "체험단 문의",
     buttons: [
       { text: "💬 1:1 문의게시판", type: "link", url: "https://alljam.co.kr/auth" },
@@ -321,9 +321,9 @@ const MENUS = {
     bubble: "프렌즈 문의 메뉴입니다.\n원하시는 항목을 선택해 주세요!",
     label: "프렌즈 문의",
     buttons: [
-      { text: "❓ 프렌즈란?",        type: "link", url: "https://alljam.co.kr/friends" },
-      { text: "📢 프렌즈 공지사항",  type: "link", url: "https://alljam.co.kr/company/notices?preset_id=&filters%5Bquery%5D=&page=1&per_page=20&token=d87a9c5e" },
-      { text: "✍️ 프렌즈 신청하기",  type: "link", url: "https://alljam.co.kr/friends/apply" },
+      { text: " 프렌즈란?",        type: "link", url: "https://alljam.co.kr/friends" },
+      { text: " 프렌즈 공지사항",  type: "link", url: "https://alljam.co.kr/company/notices?preset_id=&filters%5Bquery%5D=&page=1&per_page=20&token=d87a9c5e" },
+      { text: " 프렌즈 신청하기",  type: "link", url: "https://alljam.co.kr/friends/apply" },
     ]
   },
 };
